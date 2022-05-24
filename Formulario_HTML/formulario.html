@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" type="text/css" href="formulario.css">
+</head>
+<body>
+
+  <div>
+    <h1 id="titulo">Cadastro de Super-Heróis</h1>
+    <p id="subtitulo">Complete suas informações</p>
+    <br>
+  </div>
+
+  <form>
+    <fieldset class="grupo">
+      <div class="campo">
+        <label for="nome"><strong>Nome</strong></label>
+        <input type="text" name="nome" id="nome" required> <!-- required serve para mostrar que a pessoa não pode enviar o formulário sem que este campo esteja preenchido-->
+      </div>
+      <div class="campo">
+        <label for="sobrenome"><strong>Sobrenome</strong></label>
+        <input type="text" name="sobrenome" id="sobrenome" required>
+      </div>
+    </fieldset>
+
+    <div class="campo">
+      <label for="email"><strong>Email</strong></label>
+      <input type="email" name="email" id="email" required>
+
+    </div>
+
+    <div class="campo">
+      <label><strong>De qual equipe você faz parte?</strong> </label>
+      <label>
+        <input type="radio" name="superheroi" value="liga" checked> Liga da Justiça <!-- checked é utilizado para que a bolinha de seleção fique aqui -->
+      </label>
+      <label>
+        <input type="radio" name="superheroi" value="marvel"> Marvel
+      </label>
+    </div>
+
+    <div class="campo">
+      <label for="poder"> <strong>Tipo de poder </strong></label>
+      <select id="poder" required>
+         <option select desabled value ="">Selecione</option> <!-- opção para nao ficar selecionado nenhuma das opções -->
+        <option>Sensorial</option>
+        <option>Mental</option>
+        <option>Corporal</option>
+        <option>Energético</option>
+        <option>Alteração da realidade</option>
+      </select>
+    </div>
+
+    <fieldset class="grupo">
+      <div id="check">
+        <label><strong>Selecione suas principais características:</strong> </label>
+        <br>
+        <br>
+        <input type="checkbox" id="caracteristica1" name="caracteristica1" value="Força">
+        <label type="caracteristica1">Força</label>
+        <input type="checkbox" id="caracteristica2" name="caracteristica2" value="Habilidade">
+        <label type="caracteristica2">Habilidade</label>
+        <input type="checkbox" id="caracteristica3" name="caracteristica3" value="Resistência">
+        <label type="caracteristica3">Resistência</label>
+        <input type="checkbox" id="caracteristica4" name="caracteristica4" value="Armadura">
+        <label type="caracteristica4">Armadura</label>
+        <input type="checkbox" id="caracteristica5" name="caracteristica5" value="Poder de fogo">
+        <label type="caracteristica5">Poder de fogo</label>
+        <input type="checkbox" id="caracteristica6" name="caracteristica6" value="Magia">
+        <label type="caracteristica6">Magia</label>
+        <input type="checkbox" id="caracteristica7" name="caracteristica7" value="Velocidade">
+        <label type="caracteristica7">Velocidade</label>
+      </div>
+    </fieldset>
+
+    <div class="campo">
+      <br>
+      <label><strong>Conte um pouco sobre suas experiências em combates: </strong></label>
+      <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+     
+    </div>
+    
+    <button class="botao" type="submit" onsubmit="">Concluído</button> 
+
+  </form>
+</body>
+</html>
